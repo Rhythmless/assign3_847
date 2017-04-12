@@ -1,0 +1,4 @@
+<div class="container">
+  <h1 *ngIf="weather">Current weather in {{ weather.name }}:</h1>
+  <h3 *ngIf="weather">{{ (weather.main.temp - 273.15).toFixed(0) }}&deg;C</h3>
+</div>
