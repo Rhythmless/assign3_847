@@ -1,13 +1,3 @@
-peter@DESKTOP-OJKCAP8 MINGW64 ~/gitrepos/assign3_847/djangopoll (master)
-$ python manage.py makemigrations polls
-Migrations for 'polls':
-  polls\migrations\0001_initial.py
-    - Create model Choice
-    - Create model Question
-    - Add field question to choice
-
-peter@DESKTOP-OJKCAP8 MINGW64 ~/gitrepos/assign3_847/djangopoll (master)
-$ python manage.py sqlmigrate polls 0001
 BEGIN;
 --
 -- Create model Choice
@@ -26,11 +16,3 @@ INSERT INTO "polls_choice" ("id", "choice_text", "votes", "question_id") SELECT 
 DROP TABLE "polls_choice__old";
 CREATE INDEX "polls_choice_question_id_c5b4b260" ON "polls_choice" ("question_id");
 COMMIT;
-
-peter@DESKTOP-OJKCAP8 MINGW64 ~/gitrepos/assign3_847/djangopoll (master)
-$ python manage.py migrate
-Operations to perform:
-  Apply all migrations: admin, auth, contenttypes, polls, sessions
-Running migrations:
-  Rendering model states... DONE
-  Applying polls.0001_initial... OK
